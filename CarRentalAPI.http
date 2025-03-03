@@ -1,0 +1,34 @@
+### Получить список всех автомобилей
+GET https://localhost:5001/api/cars
+Accept: application/json
+
+### Получить информацию о конкретном автомобиле
+GET https://localhost:5001/api/cars/1
+Accept: application/json
+
+### Добавить новый автомобиль
+POST https://localhost:5001/api/cars
+Content-Type: application/json
+
+{
+  "make": "Toyota",
+  "model": "Camry",
+  "year": 2021,
+  "vin": "1HGCM82633A123456",
+  "isAvailable": true
+}
+
+### Обновить данные об автомобиле
+PUT https://localhost:5001/api/cars/1
+Content-Type: application/json
+
+{
+  "make": "Toyota",
+  "model": "Camry",
+  "year": 2022,
+  "vin": "1HGCM82633A123456",
+  "isAvailable": false
+}
+
+### Удалить автомобиль
+DELETE https://localhost:5001/api/cars/1
